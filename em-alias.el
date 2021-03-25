@@ -1,0 +1,23 @@
+
+(defalias 'eshell/ff 'find-file)
+(defalias 'eshell/ffo 'find-file-other-window)
+(defalias 'eshell/clear 'eshell-truncate-buffer)
+
+(defun any-to-string (obj)
+  (if (eq (type-of 1) (type-of obj))
+      (int-to-string obj)
+    (identity obj)))
+(defun eshell-cmd-gdb (&rest args)
+  "My gdb command in eshell"
+  ;;(message "args:%s" args)
+  (let (gdbarg home)
+    (setq gdbarg (mapconcat 'any-to-string args " "))
+    (setq home (concat " " (getenv "HOME") "/"))
+    (setq gdbarg (replace-regexp-in-string "\s~/" home gdbarg))
+    (if (file-exists-p "./gdbinit")
+        (setq gdbarg (concat "-x gdbinit " gdbarg)))
+    ;;(message gdbarg)
+    (gud-gdb (concat "gdb --fullname " gdbarg))
+    )
+  )
+(defalias 'eshell/gdb 'eshell-cmd-gdb)
