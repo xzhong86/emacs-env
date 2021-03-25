@@ -30,9 +30,9 @@
 (user-try-load "em-keybind.el")
 (user-try-load "em-alias.el")
 (user-try-load "em-cygwin.el")
-(user-auto-load 'yaml-mode     "yaml-mode.el"     "YAML Mode")
-(user-auto-load 'cmake-mode    "cmake-mode.el"    "CMake Mode")
-(user-auto-load 'markdown-mode "markdown-mode.el" "Markdown Mode")
+;;(user-auto-load 'yaml-mode     "yaml-mode.el"     "YAML Mode")
+;;(user-auto-load 'cmake-mode    "cmake-mode.el"    "CMake Mode")
+;;(user-auto-load 'markdown-mode "markdown-mode.el" "Markdown Mode")
 
 
 ;; ============================================================

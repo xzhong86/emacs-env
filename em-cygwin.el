@@ -1,6 +1,6 @@
 
-(if (user-try-load "fakecygpty.el")
-    (fakecygpty-activate))
+(when (user-try-load "fakecygpty.el")
+  (fakecygpty-activate))
 
 (defun add-cygssh-to-tramp-methods ()
   (add-to-list 'tramp-methods
@@ -50,9 +50,9 @@
 	       ))
 
 
-(eval-after-load "tramp"
-  '(progn
-     (add-sshw-to-tramp-methods)
-     (add-plinkw-to-tramp-methods)
-     (setq tramp-default-method "sshw")))
-
+(when fakecygpty--activated
+  (eval-after-load "tramp"
+    '(progn
+       (add-sshw-to-tramp-methods)
+       (add-plinkw-to-tramp-methods)
+       (setq tramp-default-method "sshw"))))
