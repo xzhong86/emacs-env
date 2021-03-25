@@ -51,9 +51,11 @@
              '("Makefile\\..*" . makefile-gmake-mode))
 
 ;;(add-hook 'c-mode-hook '(lambda() (c-set-style "k&r")))
-(add-hook 'c-mode-hook '(lambda() (c-set-style "stroustrup")))
+(add-hook 'c-mode-hook '(lambda() (c-set-style "stroustrup")
+                          (setq show-trailing-whitespace t)))
 (add-hook 'c++-mode-hook '(lambda() (c-set-style "cc-mode")
-                            (c-set-offset 'innamespace 0)))
+                            (c-set-offset 'innamespace 0)
+                            (setq show-trailing-whitespace t)))
 
 ;; show paren {} [] ()
 (show-paren-mode 0)
@@ -63,6 +65,12 @@
 ;;(setq completion-ignore-case t)
 (setq read-buffer-completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
+
+;(setq show-trailing-whitespace t)  ; display tailing space
+
+;; automatically add newline at end of file when save
+(setq require-final-newline t)
+(setq mode-require-final-newline t)
 
 
 ;; ============================================================
