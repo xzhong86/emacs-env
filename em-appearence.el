@@ -6,8 +6,8 @@
 ;; windows view
 
 (setq inhibit-startup-screen t)
-(menu-bar-mode 0)
-(tool-bar-mode 0)
+(menu-bar-mode t)
+(tool-bar-mode nil)
 
 
 ;; mode line

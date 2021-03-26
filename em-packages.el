@@ -9,6 +9,7 @@
 
 
 ;; setup for ccls
+(setq bruce-ccls-enabled nil)
 (let ((ccls-path "/home/z00249865/opt/ccls/bin/ccls"))
   (when (and (package-installed-p 'ccls) (file-exists-p ccls-path))
     (require 'ccls)
