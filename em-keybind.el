@@ -53,6 +53,9 @@
 (global-unset-key [C-prior]) ;; unmap Ctrl + PageUp
 (global-unset-key [C-next])  ;; unmap Ctrl + PageDown
 
+(global-set-key [home] 'move-beginning-of-line)  ;; for MacOS or Emcas 27.1
+(global-set-key [end] 'move-end-of-line)         ;; for MaxOS or Emacs 27.1
+
 ;; Key others
 ;; Mouse operation
 (global-set-key [mouse-3] 'mouse-buffer-menu)
