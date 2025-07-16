@@ -52,10 +52,12 @@
 
 ;;(add-hook 'c-mode-hook '(lambda() (c-set-style "k&r")))
 (add-hook 'c-mode-hook '(lambda() (c-set-style "stroustrup")
-                          (setq show-trailing-whitespace t)))
+                          (setq show-trailing-whitespace t)
+			  (setq indent-tabs-mode nil)))
 (add-hook 'c++-mode-hook '(lambda() (c-set-style "cc-mode")
                             (c-set-offset 'innamespace 0)
-                            (setq show-trailing-whitespace t)))
+                            (setq show-trailing-whitespace t)
+			    (setq indent-tabs-mode nil)))
 
 ;; show paren {} [] ()
 (show-paren-mode 0)

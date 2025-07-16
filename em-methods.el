@@ -68,3 +68,7 @@ line."
         (find-file-other-window (concat default-directory file))
         (and lnum (goto-line (string-to-number lnum)))))))
 
+
+(defun untabify-whole-buffer ()
+  (interactive)
+  (untabify (point-min) (point-max)))
