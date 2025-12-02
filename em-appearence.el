@@ -7,7 +7,7 @@
 
 (setq inhibit-startup-screen t)
 (menu-bar-mode t)
-(tool-bar-mode nil)
+(tool-bar-mode -1)
 
 
 ;; mode line

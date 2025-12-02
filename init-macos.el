@@ -12,16 +12,17 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(eshell-hist-ignoredups 'erase)
  '(mouse-wheel-progressive-speed nil)
  '(package-selected-packages
-   '(cmake-mode markdown-mode treemacs treemacs-all-the-icons
+   '(cmake-mode magit markdown-mode treemacs treemacs-all-the-icons
 		treemacs-icons-dired)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Courier New" :foundry "outline" :slant normal :weight normal :height 143 :width normal)))))
+ '(default ((t (:family "Intel One Mono" :foundry "outline" :slant normal :weight normal :height 143 :width normal)))))
 
 
 ;; ============================================================

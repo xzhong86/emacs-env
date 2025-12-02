@@ -1,0 +1,9 @@
+
+.cache/
+auto-save-list/
+elpa/
+transient/
+
+eshell/
+ido.last
+

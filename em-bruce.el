@@ -46,6 +46,9 @@
 ;; No too many #*, *~ files
 (setq make-backup-files nil)
 
+;; remove duplicated commands in eshell history
+(setq eshell-hist-ignoredups 'erase)
+
 
 (add-to-list 'auto-mode-alist
              '("Makefile\\..*" . makefile-gmake-mode))
